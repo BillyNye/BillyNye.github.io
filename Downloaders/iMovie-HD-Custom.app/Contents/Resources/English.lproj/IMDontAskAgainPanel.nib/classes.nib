@@ -1,0 +1,18 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {buttonPressed = id; }; 
+            CLASS = IMDontAskAgainPanel; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mDefaultButton = NSButton; 
+                mDontAskAgainCheckbox = NSButton; 
+                mMessageText = NSTextField; 
+                mTitleText = NSTextField; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

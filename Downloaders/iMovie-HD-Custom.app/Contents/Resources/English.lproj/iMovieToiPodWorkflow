@@ -1,0 +1,55 @@
+-- iMovieToiPodWorkflow
+-- iMovieApp
+
+--  Created by Greg Mullins on 9/22/05.
+--  Copyright 2005 Apple Computer Inc. All rights reserved.
+
+
+
+-------------------------------------------------------------------------------------------------------------
+--gkm 22-sept-05
+--
+--
+--
+-- This is the first pass at sending iTumes an iPod ready QuickTime based movie file of an iMovie project
+-------------------------------------------------------------------------------------------------------------
+
+
+
+--please don't localize anything below here....
+
+
+--
+--
+-- send_itunes_imovieproject
+--
+-- main entry point for BeetleJuice to iTunes workflow
+--
+on send_itunes_imovieproject(project_name, itunes_movie_path, is_itunes_running)
+
+--display dialog "in send_itunes_imovieproject"
+
+set projectName to project_name
+set moviePath to itunes_movie_path
+set	isiTunesRunning to is_itunes_running
+
+--display dialog "projectName: " & projectName
+--display dialog "moviePath: " & moviePath
+--display dialog "isiTunesRunning: " & isiTunesRunning
+
+set userCanceledSaveReturnValue to "user canceled save"
+
+--NOTE: we now expect iTunes to be launched by the time we get here....
+
+try
+tell application "%@"
+	activate
+	add ((moviePath as POSIX file) as alias)
+end tell
+
+on error
+--display dialog "ERROR"
+	return userCanceledSaveReturnValue
+end try
+
+end send_itunes_imovieproject

@@ -1,0 +1,35 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = GraphicalButton; LANGUAGE = ObjC; SUPERCLASS = NSButton; }, 
+        {CLASS = GraphicalPushButton; LANGUAGE = ObjC; SUPERCLASS = GraphicalButton; }, 
+        {CLASS = HorzGraphicalButton; LANGUAGE = ObjC; SUPERCLASS = GraphicalButton; }, 
+        {
+            CLASS = HorzGraphicalPushButton; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = HorzGraphicalButton; 
+        }, 
+        {
+            CLASS = IMAEView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mApplyButton = NSButton; 
+                mController = IMAEWindowController; 
+                mLoopButton = NSButton; 
+                mTabView = NSTabView; 
+                mTableView = NSTableView; 
+                mViewContainerForAU = NSBox; 
+            }; 
+            SUPERCLASS = NSBox; 
+        }, 
+        {
+            ACTIONS = {buttonClicked = id; sliderChanged = id; }; 
+            CLASS = IMAEWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mView = NSView; }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = NSSegmentedControl; LANGUAGE = ObjC; SUPERCLASS = NSControl; }
+    ); 
+    IBVersion = 1; 
+}

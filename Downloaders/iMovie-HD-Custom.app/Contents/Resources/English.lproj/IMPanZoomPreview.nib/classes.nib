@@ -1,0 +1,68 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = GraphicalButton; LANGUAGE = ObjC; SUPERCLASS = NSButton; }, 
+        {CLASS = HorzGraphicalButton; LANGUAGE = ObjC; SUPERCLASS = GraphicalButton; }, 
+        {
+            CLASS = HorzGraphicalPushButton; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = HorzGraphicalButton; 
+        }, 
+        {CLASS = IMBorderlessWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
+        {
+            CLASS = IMDurationTextField; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindowController = id; }; 
+            SUPERCLASS = NSTextField; 
+        }, 
+        {
+            CLASS = IMFloatingPushButton; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = HorzGraphicalButton; 
+        }, 
+        {CLASS = IMFloatingSlider; LANGUAGE = ObjC; SUPERCLASS = IMGraphicalSlider; }, 
+        {
+            CLASS = IMGraphicalSlider; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mTarget = id; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            CLASS = IMKenBurnsStartEndSwitchView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindowController = IMPanZoomPreviewController; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            ACTIONS = {
+                applyButtonPressed = id; 
+                hideShowPhotoSettingsWindow = id; 
+                reverse = id; 
+                setDuration = id; 
+                setWhich = id; 
+                setZoom = id; 
+                toggleKenBurns = id; 
+            }; 
+            CLASS = IMPanZoomPreviewController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mApplyButton = NSButton; 
+                mDividingLine = NSBox; 
+                mDurationSlider = IMFloatingSlider; 
+                mDurationTextField = IMDurationTextField; 
+                mEndTextField = NSTextField; 
+                mKenBurnsCheckBox = NSButton; 
+                mPhotoSettingsWindow = IWFloatingWindow; 
+                mReverseButton = NSButton; 
+                mStartFinishSwitch = IMKenBurnsStartEndSwitchView; 
+                mStartTextField = NSTextField; 
+                mZoomSlider = IMFloatingSlider; 
+                mZoomTextField = NSTextField; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = IWFloatingView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = IWFloatingWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }
+    ); 
+    IBVersion = 1; 
+}

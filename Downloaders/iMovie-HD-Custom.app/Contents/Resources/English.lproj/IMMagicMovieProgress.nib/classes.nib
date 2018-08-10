@@ -1,0 +1,36 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = IMMagicMovieProgress; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mAddingMusicImageView = NSImageView; 
+                mAddingMusicTextField = NSTextField; 
+                mAddingTitleImageView = NSImageView; 
+                mAddingTitleTextField = NSTextField; 
+                mAddingTransitionsImageView = NSImageView; 
+                mAddingTransitionsTextField = NSTextField; 
+                mCapturingImageView = NSImageView; 
+                mCapturingTextField = NSTextField; 
+                mSendingToIDVDImageView = NSImageView; 
+                mSendingToIDVDTextField = NSTextField; 
+            }; 
+            SUPERCLASS = IMProgressPanelController; 
+        }, 
+        {
+            ACTIONS = {cancel = id; }; 
+            CLASS = IMProgressPanelController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mCancelButton = NSButton; 
+                mLowerTextField = NSTextField; 
+                mProgressIndicator = NSProgressIndicator; 
+                mTitleTextField = NSTextField; 
+                mUpperTextField = NSTextField; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

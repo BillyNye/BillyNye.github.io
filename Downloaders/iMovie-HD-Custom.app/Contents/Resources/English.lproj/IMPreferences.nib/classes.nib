@@ -1,0 +1,27 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                frameRatePrefChanged = id; 
+                prefChanged = id; 
+                prefChangedSoRedrawClips = id; 
+                videoPlayThroughChanged = id; 
+            }; 
+            CLASS = IMPreferencesController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mDefaultFrameRateButton = NSPopUpButton; 
+                mFieldBlendingButtonCell = NSButtonCell; 
+                mKeepPlayheadCenteredCB = NSButton; 
+                "mQualityHDV_DVTabView" = NSTabView; 
+                "mQualityHDV_HighCell" = NSButtonCell; 
+                "mQualityHDV_HighestCell" = NSButtonCell; 
+                mTabView = NSTabView; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = IMPrefsDelegate; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

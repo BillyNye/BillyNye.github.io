@@ -1,0 +1,57 @@
+-------------------------------------------------------------------------------------------------------------
+--gkm 19-aug-05
+--
+--
+--
+-- This is the first pass at sending iWeb a Web ready QuickTime based movie file of an iMovie project
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+--please don't localize anything below here....
+
+
+--
+--
+-- send_iWeb_imovieproject
+--
+-- main entry point for BeetleJuice to iWeb workflow
+--
+on send_iweb_imovieproject(project_name, iWeb_movie_path, send_to_blog, is_iWeb_running)
+
+--display dialog "in send_iWeb_imovieproject"
+
+set projectName to project_name
+set moviePath to iWeb_movie_path
+set sendToBlog to send_to_blog
+set	isiWebRunning to is_iWeb_running
+
+--display dialog "moviePath: " & moviePath
+--display dialog "projectName: " & projectName
+--display dialog "sendToBlog: " & sendToBlog
+--display dialog "isiWebRunning: " & isiWebRunning
+
+set userCanceledSaveReturnValue to "user canceled save"
+
+--NOTE: we now expect iWeb to be launched by the time we get here....
+
+try
+tell application "%@"
+	activate
+	if sendToBlog is false then
+		tell front document to add movie page named projectName with movie moviePath
+	else
+		tell front document to add movie blog entry named projectName with movie moviePath
+	end if
+end tell
+
+on error
+--display dialog "ERROR"
+	return userCanceledSaveReturnValue
+end try
+
+end send_iweb_imovieproject

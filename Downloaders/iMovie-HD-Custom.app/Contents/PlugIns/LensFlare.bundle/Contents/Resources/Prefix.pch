@@ -1,0 +1,3 @@
+#define GCS_DE_iMovie_FX_LensFlare 1
+
+#include <iMoviePluginAPI/HYPluginInterface.h>

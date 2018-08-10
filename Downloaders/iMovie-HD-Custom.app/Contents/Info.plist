@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>iMovieProject</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>proj.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>iMovie Project</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSTypeIsPackage</key>
+			<true/>
+			<key>NSDocumentClass</key>
+			<string>IMProject</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>iMovieProj</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>data.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>iMovie Project File</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>TeXT</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>NSDocumentClass</key>
+			<string>IMProject</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>imovieproj</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>data.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>iMovie Project File</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>TeXT</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>NSDocumentClass</key>
+			<string>IMProject</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>iMovie HD</string>
+	<key>CFBundleGetInfoString</key>
+	<string>6.0.4 (Modified by @WHALEMART123), © Apple Inc., 1999–2007</string>
+	<key>CFBundleIconFile</key>
+	<string>iMovie.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.iMovie</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0.4 (Modified by @WHALEMART123)</string>
+	<key>CFBundleName</key>
+	<string>iMovie HD</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>6.0.4 (Modified by @WHALEMART123)</string>
+	<key>CFBundleSignature</key>
+	<string>Hway</string>
+	<key>CFBundleVersion</key>
+	<string>6.0.4 (Modified by @WHALEMART123)</string>
+	<key>CSResourcesFileMapped</key>
+	<true/>
+	<key>LSMultipleInstancesProhibited</key>
+	<true/>
+	<key>LSRequiresNativeExecution</key>
+	<true/>
+	<key>NSMainNibFile</key>
+	<string>IMMainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>IMApplication</string>
+</dict>
+</plist>

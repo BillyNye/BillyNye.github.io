@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+<key>_LOCALIZABLE_</key>
+<dict>
+	<key>menuName</key>
+	<array>
+		<string>Wash Out</string>
+		<string>Wash In</string>
+	</array>
+	<key>progressString</key>
+	<array>
+		<string>Creating Transition...</string>
+	</array>
+</dict>
+</dict>
+</plist>

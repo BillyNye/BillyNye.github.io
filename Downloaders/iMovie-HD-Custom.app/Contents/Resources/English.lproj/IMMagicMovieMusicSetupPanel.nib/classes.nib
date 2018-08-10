@@ -1,0 +1,44 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {cancel = id; ok = id; volumeChanged = id; }; 
+            CLASS = IMDVDMusicPanel; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mCancelButton = NSButton; 
+                mDVDPlaylist = IMDVDMusicPlaylistTable; 
+                mDragHereBox = NSBox; 
+                mInstructionText = NSTextField; 
+                mMediaBrowser = IMMediaBrowserAudioView; 
+                mMusicVolume = NSSlider; 
+                mOKButton = NSButton; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = IMDVDMusicPlaylistTable; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
+        {
+            ACTIONS = {importSelection = id; }; 
+            CLASS = IMMediaBrowserAudioView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mPlaceAtPlayheadButton = NSButton; mWindowController = IMProjectController; }; 
+            SUPERCLASS = MediaBrowserView; 
+        }, 
+        {CLASS = MXITunesTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
+        {
+            ACTIONS = {
+                displayMovies = id; 
+                displayPictures = id; 
+                displaySongs = id; 
+                playSelectedSongs = id; 
+                stopPreview = id; 
+            }; 
+            CLASS = MediaBrowserView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mDelegate = id; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }
+    ); 
+    IBVersion = 1; 
+}

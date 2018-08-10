@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IBDocumentLocation</key>
+	<string>972 65 567 830 0 0 1680 1028 </string>
+	<key>IBEditorPositions</key>
+	<dict>
+		<key>3170</key>
+		<string>398 739 186 218 0 0 1280 1002 </string>
+		<key>3179</key>
+		<string>393 704 224 237 0 0 1280 1002 </string>
+		<key>3192</key>
+		<string>402 683 204 275 0 0 1280 1002 </string>
+		<key>3204</key>
+		<string>397 746 204 256 0 0 1280 1002 </string>
+		<key>3214</key>
+		<string>390 727 228 275 0 0 1280 1002 </string>
+		<key>3216</key>
+		<string>739 803 158 199 0 0 1280 1002 </string>
+		<key>3231</key>
+		<string>399 685 204 275 0 0 1280 1002 </string>
+		<key>3232</key>
+		<string>439 802 237 168 0 0 1280 1002 </string>
+		<key>3233</key>
+		<string>429 777 204 225 0 0 1280 1002 </string>
+		<key>3234</key>
+		<string>544 891 155 87 0 0 1680 1028 </string>
+		<key>3240</key>
+		<string>1079 934 110 68 0 0 1600 1002 </string>
+		<key>3245</key>
+		<string>396 693 204 168 0 0 1280 1002 </string>
+		<key>3261</key>
+		<string>1079 934 110 68 0 0 1600 1002 </string>
+	</dict>
+	<key>IBFramework Version</key>
+	<string>443.0</string>
+	<key>IBGroupedObjects</key>
+	<dict>
+		<key>0</key>
+		<array>
+			<string>1715</string>
+			<string>1716</string>
+		</array>
+		<key>1</key>
+		<array>
+			<string>3528</string>
+			<string>3532</string>
+		</array>
+	</dict>
+	<key>IBLastGroupID</key>
+	<string>2</string>
+	<key>IBLockedObjects</key>
+	<array>
+		<integer>486</integer>
+	</array>
+	<key>IBOpenObjects</key>
+	<array>
+		<integer>304</integer>
+	</array>
+	<key>IBSystem Version</key>
+	<string>8G32</string>
+</dict>
+</plist>

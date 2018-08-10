@@ -1,0 +1,12 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = IMSaveFrameController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {fileFormatPopupButton = id; saveFrameAccessory = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

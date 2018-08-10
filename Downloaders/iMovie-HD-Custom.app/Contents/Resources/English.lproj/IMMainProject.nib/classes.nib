@@ -1,0 +1,967 @@
+{
+    IBClasses = (
+        {CLASS = DMClipShelf; LANGUAGE = ObjC; SUPERCLASS = DynamicMatrix; }, 
+        {
+            ACTIONS = {clear = id; cut = id; paste = id; }; 
+            CLASS = DynamicMatrix; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mController = id; mDraggingInfo = id; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {CLASS = EtchedText; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
+        {
+            ACTIONS = {
+                "" = id; 
+                lockAudio = id; 
+                myAction = id; 
+                selectNone = id; 
+                splitClip = id; 
+                unlockAudio = id; 
+            }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = GraphicalButton; LANGUAGE = ObjC; SUPERCLASS = NSButton; }, 
+        {CLASS = HorzGraphicalButton; LANGUAGE = ObjC; SUPERCLASS = GraphicalButton; }, 
+        {
+            CLASS = HorzGraphicalPushButton; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = HorzGraphicalButton; 
+        }, 
+        {
+            ACTIONS = {
+                checkForUpgrades = id; 
+                goToBuySite = id; 
+                goToFeedbackSite = id; 
+                goToHotTipsSite = id; 
+                goToRegisterApplicationURL = id; 
+                goToSupportSite = id; 
+                goToWebSite = id; 
+                preferences = id; 
+                showAboutBox = id; 
+                showKeyboardShortcuts = id; 
+            }; 
+            CLASS = IM2AppDelegate; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                burnProjectToDisc = id; 
+                checkForUpgrades = id; 
+                createClip = id; 
+                createStillClip = id; 
+                crop = id; 
+                extractAudio = id; 
+                fitAudioToVideo = id; 
+                fitVideoToAudio = id; 
+                getClipInfo = id; 
+                goToBuySite = id; 
+                goToFeedbackSite = id; 
+                goToHotTipsSite = id; 
+                goToRegisterApplicationURL = id; 
+                goToSupportSite = id; 
+                goToWebSite = id; 
+                importFiles = id; 
+                letterboxClip = id; 
+                makeMagicMovie = id; 
+                newDocument = id; 
+                openDocument = id; 
+                pasteOverAtCliphead = id; 
+                pillarboxClip = id; 
+                preferences = id; 
+                qtEnd = id; 
+                qtHome = id; 
+                qtPlay = id; 
+                qtPlayFullScreen = id; 
+                redo = id; 
+                restoreClipMedia = id; 
+                revertDocumentToSaved = id; 
+                saveDocument = id; 
+                saveFrameAs = id; 
+                scrollToSelection = id; 
+                selectSimilarClips = id; 
+                setCameraModeFromSource = id; 
+                shareMovie = id; 
+                showAboutBox = id; 
+                showFullVideoResolution = id; 
+                showKeyboardShortcuts = id; 
+                soundEffectClicked = id; 
+                soundEffectDoubleClicked = id; 
+                toggleFullScreenMode = id; 
+                toggleMicRecord = id; 
+                undo = id; 
+                updateCustomSaveViewText = id; 
+                updateMasterVolume = id; 
+                updateNewProjectFormatOptions = id; 
+                updateShowAdvancedOptions = id; 
+            }; 
+            CLASS = IMAppController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mAudioMicrophoneView = IMMicrophoneView; 
+                mCameraSwitch = IMSourceSwitchView; 
+                mChapterMarkerController = IMChapterMarkerController; 
+                mClipViewer = IMTimelineView; 
+                mContextualMenuController = IMContextualMenuController; 
+                mCustomSaveView = NSView; 
+                mEditModeButton = NSButton; 
+                mEffectController = IMEffectController; 
+                mEmptyTrashMenuItem = NSMenuItem; 
+                mImageStillPreview = IMStillPreview; 
+                mLargePreview = IMQuickDrawView; 
+                mMainAppDelegate = IMMainAppDelegate; 
+                mMainWindow = IMMainWindow; 
+                mMasterVolumeSlider = NSSlider; 
+                mMicRecordButton = RecordButtonView; 
+                mMovieQDView = IMMovieQDView; 
+                mMovieTabView = IMTabView; 
+                mMovieView = IMMovieView; 
+                mPlayControlView = PlayControlView; 
+                mPlayControlsTabView = NSTabView; 
+                mPluginController = IMPluginController; 
+                mPluginsTabView = IMTabView; 
+                mScrubberBar = IMScrubberView2; 
+                mSelectionInfoText = EtchedText; 
+                mSeqGrabberView = IMSeqGrabberView; 
+                mShelf = DMClipShelf; 
+                mShelfBox = NSBox; 
+                mSourceSwitchBox = NSBox; 
+                mTabControlView = TabviewControlView; 
+                mTimelineBox = NSBox; 
+                mTitleController = IMTitleController; 
+                mTransitionController = IMTransitionController; 
+                mVolumeBox = NSBox; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = IMApplication; LANGUAGE = ObjC; SUPERCLASS = NSApplication; }, 
+        {
+            CLASS = IMBigGraphicalTabButton; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = HorzGraphicalButton; 
+        }, 
+        {
+            ACTIONS = {
+                addBookmark = id; 
+                deleteAllBookmarks = id; 
+                deleteBookmark = id; 
+                moveToNextBookmark = id; 
+                moveToPreviousBookmark = id; 
+            }; 
+            CLASS = IMBookmarkController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindowController = IMProjectController; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                cameraFastForward = id; 
+                cameraPause = id; 
+                cameraPlay = id; 
+                cameraReverse = id; 
+                cameraStop = id; 
+            }; 
+            CLASS = IMCameraControlView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mFastForwardButton = GraphicalButton; 
+                mGrabberView = IMSeqGrabberView; 
+                mPauseButton = GraphicalButton; 
+                mPlayButton = GraphicalButton; 
+                mRewindButton = GraphicalButton; 
+                mStopButton = GraphicalButton; 
+                mWindowController = id; 
+            }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            ACTIONS = {
+                addChapterMarker = id; 
+                deleteChapterMarker = id; 
+                deleteChapterMarkerViaMenu = id; 
+                sendMovieToiDVD = id; 
+            }; 
+            CLASS = IMChapterMarkerController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mAddMarkerButton = NSButton; 
+                mDeleteMarkerButton = NSButton; 
+                mMarkerTableView = IMEnhancedTableView; 
+                mTimelineView = IMTimelineView; 
+                mWindowController = IMProjectController; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = IMChapterTableView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = IMEnhancedTableView; 
+        }, 
+        {
+            CLASS = IMChapterTextFieldCell; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTextFieldCell; 
+        }, 
+        {
+            ACTIONS = {
+                changeView = id; 
+                markerAddToMusicBar = id; 
+                markerAddToVideoBar = id; 
+                markerAddToVoiceBar = id; 
+                markerDelete = id; 
+                markerSetVolume = id; 
+                markerUpdateText = id; 
+                zoomTimeLine = id; 
+            }; 
+            CLASS = IMClipViewer; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mAppController = id; 
+                mClipViewerRadio = id; 
+                mMarkerTextBox = id; 
+                mMarkerVolume = id; 
+                mTimeLineRadio = id; 
+            }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {CLASS = IMCocoaMovieView; LANGUAGE = ObjC; SUPERCLASS = QTMovieView; }, 
+        {CLASS = IMCocoaTitleInputView; LANGUAGE = ObjC; SUPERCLASS = NSTextView; }, 
+        {
+            CLASS = IMContextualMenuController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mShelfClipMenu = NSMenu; 
+                mTimelineAudioClipMenu = NSMenu; 
+                mTimelineEffectClipMenu = NSMenu; 
+                mTimelinePhotoClipMenu = NSMenu; 
+                mTimelinePlayheadMenu = NSMenu; 
+                mTimelineTitleClipMenu = NSMenu; 
+                mTimelineTransitionClipMenu = NSMenu; 
+                mTimelineVideoClipMenu = NSMenu; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = IMDiskSpaceController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mDiskRemaining = EtchedText; mProjectController = IMProjectController; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {dummyAction = id; }; 
+            CLASS = IMDummyTarget; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = IMDurationTextField; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindowController = id; }; 
+            SUPERCLASS = NSTextField; 
+        }, 
+        {
+            ACTIONS = {
+                selectAudioEffectsTab = id; 
+                selectEffectsTab = id; 
+                selectTitlesTab = id; 
+                selectTransitionsTab = id; 
+            }; 
+            CLASS = IMEditingTabControlView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mAudioEffectsButton = IMSmallGraphicalTabButton; 
+                mEditingTabView = NSTabView; 
+                mEffectsButton = IMSmallGraphicalTabButton; 
+                mProjectController = IMProjectController; 
+                mTitlesButton = IMSmallGraphicalTabButton; 
+                mTransitionsButton = IMSmallGraphicalTabButton; 
+            }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            ACTIONS = {
+                applyEffect = id; 
+                color1Changed = id; 
+                color2Changed = id; 
+                restoreEffect = id; 
+                updateFadeInOut = id; 
+                updateReverse = id; 
+                updateSliderSetting = id; 
+            }; 
+            CLASS = IMEffectController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mColorWell1 = NSColorWell; 
+                mColorWell1Label = NSTextField; 
+                mColorWell2 = NSColorWell; 
+                mColorWell2Label = NSTextField; 
+                mEffectInSlider = MouseEventSlider; 
+                mEffectInText = NSTextField; 
+                mEffectOutSlider = MouseEventSlider; 
+                mEffectOutText = NSTextField; 
+                mEffectsApplyButton = NSButton; 
+                mEffectsOutlineView = NSOutlineView; 
+                mEffectsSlider1 = MouseEventSlider; 
+                mEffectsSlider2 = MouseEventSlider; 
+                mEffectsSlider3 = MouseEventSlider; 
+                mFadeInText = IMDurationTextField; 
+                mFadeOutText = IMDurationTextField; 
+                mReverseCheckBox = NSButton; 
+                mSlider1Label = NSTextField; 
+                mSlider1MaxLabel = NSTextField; 
+                mSlider1MinLabel = NSTextField; 
+                mSlider2Label = NSTextField; 
+                mSlider2MaxLabel = NSTextField; 
+                mSlider2MinLabel = NSTextField; 
+                mSlider3Label = NSTextField; 
+                mSlider3MaxLabel = NSTextField; 
+                mSlider3MinLabel = NSTextField; 
+            }; 
+            SUPERCLASS = IMPluginControllerCommon; 
+        }, 
+        {CLASS = IMEnhancedTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
+        {
+            CLASS = IMFloatingPushButton; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = HorzGraphicalButton; 
+        }, 
+        {CLASS = IMFloatingSlider; LANGUAGE = ObjC; SUPERCLASS = IMGraphicalSlider; }, 
+        {
+            CLASS = IMGraphicalSlider; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mTarget = id; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            CLASS = IMHDVBufferView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mDCLOverrunImg = NSImageView; mWindowController = id; }; 
+            SUPERCLASS = EtchedText; 
+        }, 
+        {
+            CLASS = IMHDVCaptureView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mDVGrabberView = IMSeqGrabberView; 
+                mHDVBufferView = IMHDVBufferView; 
+                mWindowController = id; 
+            }; 
+            SUPERCLASS = NSOpenGLView; 
+        }, 
+        {
+            CLASS = IMKenBurnsStartEndSwitchView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindowController = IMPanZoomPreviewController; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            CLASS = IMMainAppDelegate; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mProjectController = IMProjectController; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = IMMainWindow; LANGUAGE = ObjC; SUPERCLASS = IWWindow; }, 
+        {
+            CLASS = IMMainWindowView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = IWWindowBackgroundView; 
+        }, 
+        {
+            ACTIONS = {importSelection = id; }; 
+            CLASS = IMMediaBrowserAudioView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mPlaceAtPlayheadButton = NSButton; mWindowController = IMProjectController; }; 
+            SUPERCLASS = MediaBrowserView; 
+        }, 
+        {
+            CLASS = IMMediaBrowseriPhotoView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindowController = IMProjectController; }; 
+            SUPERCLASS = MediaBrowserView; 
+        }, 
+        {
+            ACTIONS = {selectAudioTab = id; selectImagesTab = id; }; 
+            CLASS = IMMediaTabControlView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mAudioButton = IMSmallGraphicalTabButton; 
+                mImagesButton = IMSmallGraphicalTabButton; 
+                mMediaTabView = NSTabView; 
+                mProjectController = IMProjectController; 
+            }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            CLASS = IMMicrophoneController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mProjectController = IMProjectController; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = IMMicrophoneView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            CLASS = IMMovieQDView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindowController = IMProjectController; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            ACTIONS = {muteTrack = id; start = id; updateTheMovieFrame = id; }; 
+            CLASS = IMMovieView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mMuteAudioIcon = NSImageView; 
+                mMuteMusicTrackButton = NSButton; 
+                mMuteVideoTrackButton = NSButton; 
+                mMuteVoiceTrackButton = NSButton; 
+                mWindowController = id; 
+            }; 
+            SUPERCLASS = IMCocoaMovieView; 
+        }, 
+        {CLASS = IMNonEnlargableBox; LANGUAGE = ObjC; SUPERCLASS = NSBox; }, 
+        {CLASS = IMOutlineView; LANGUAGE = ObjC; SUPERCLASS = NSOutlineView; }, 
+        {
+            ACTIONS = {
+                reverse = id; 
+                setDuration = id; 
+                setWhich = id; 
+                setZoom = id; 
+                toggleKenBurns = id; 
+            }; 
+            CLASS = IMPanZoomGlue; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mDurationSlider = NSSlider; 
+                mDurationText = IMDurationTextField; 
+                mKenBurnsCheckBox = NSButton; 
+                mProjectController = IMProjectController; 
+                mReverseButton = NSButton; 
+                mStartFinishSwitch = IMKenBurnsStartEndSwitchView; 
+                mZoomSlider = NSSlider; 
+                mZoomText = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {pluginsOutlineClicked = id; previewLarge = id; }; 
+            CLASS = IMPluginController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindowController = IMProjectController; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {customButtonClicked = id; fileButtonClicked = id; }; 
+            CLASS = IMPluginControllerCommon; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mCustomButton = NSButton; 
+                mFileButton = NSButton; 
+                mWindowController = IMProjectController; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = IMPluginDirectionView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindowController = IMProjectController; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            ACTIONS = {
+                addBookmark = id; 
+                addChapterMarker = id; 
+                burnProjectToDisc = id; 
+                createClip = id; 
+                createStillClip = id; 
+                crop = id; 
+                deleteAllBookmarks = id; 
+                deleteBookmark = id; 
+                deleteChapterMarkerViaMenu = id; 
+                didShowHideAudioWaveforms = id; 
+                didShowHideVolumeLevels = id; 
+                emptyTrash = id; 
+                extractAudio = id; 
+                fitAudioToVideo = id; 
+                fitVideoToAudio = id; 
+                getClipInfo = id; 
+                importFiles = id; 
+                letterboxClip = id; 
+                makeMagicMovie = id; 
+                moveToNextBookmark = id; 
+                moveToPreviousBookmark = id; 
+                pasteOverAtCliphead = id; 
+                pillarboxClip = id; 
+                qtEnd = id; 
+                qtHome = id; 
+                qtPlay = id; 
+                qtPlayFullScreen = id; 
+                redo = id; 
+                restoreClipMedia = id; 
+                revertDocumentToSaved = id; 
+                saveDocument = id; 
+                saveFrameAs = id; 
+                scrollToPlayhead = id; 
+                scrollToSelection = id; 
+                selectSimilarClips = id; 
+                setCameraModeFromSource = id; 
+                shareMovie = id; 
+                shareMovieToBlueTooth = id; 
+                shareMovieToCamera = id; 
+                shareMovieToEmail = id; 
+                shareMovieToGarageBand = id; 
+                shareMovieToQuickTime = id; 
+                shareMovieToiDVD = id; 
+                shareMovieToiPod = id; 
+                shareMovieToiWeb = id; 
+                showFullVideoResolution = id; 
+                showTrashWindow = id; 
+                toggleFullScreenEditMode = id; 
+                toggleMicRecord = id; 
+                toggleTimelineMode = id; 
+                undo = id; 
+                updateMasterVolume = id; 
+                zoomToSelection = id; 
+            }; 
+            CLASS = IMProjectController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mAudioMicrophoneView = IMMicrophoneView; 
+                mBookmarkController = IMBookmarkController; 
+                mCameraSwitch = IMSourceSwitchView; 
+                mChapterMarkerController = IMChapterMarkerController; 
+                mClipViewer = IMTimelineView; 
+                mContextualMenuController = IMContextualMenuController; 
+                mEditModeButton = NSButton; 
+                mEditingTabControlView = IMEditingTabControlView; 
+                mEditingTabView = NSTabView; 
+                mEffectController = IMEffectController; 
+                mFauxDelegate = IMMainAppDelegate; 
+                mHideShowPZSettingsButton = NSButton; 
+                mImageStillPreview = IMStillPreview; 
+                mLargePreview = IMQuickDrawView; 
+                mMainWindow = IMMainWindow; 
+                mMasterVolumeSlider = NSSlider; 
+                mMediaBrowserAudioView = IMMediaBrowserAudioView; 
+                mMediaBrowserPhotoView = IMMediaBrowseriPhotoView; 
+                mMediaTabControlView = IMMediaTabControlView; 
+                mMediaTabView = NSTabView; 
+                mMicController = IMMicrophoneController; 
+                mMicRecordButton = RecordButtonView; 
+                mMovieQDView = IMMovieQDView; 
+                mMovieTabView = IMTabView; 
+                mMovieView = IMMovieView; 
+                mPlayControlView = PlayControlView; 
+                mPlayControlsTabView = NSTabView; 
+                mPluginController = IMPluginController; 
+                mPluginsTabView = IMTabView; 
+                mScrubberBar = IMScrubberView2; 
+                mSelectionInfoText = NSTextField; 
+                mSeqGrabberView = IMSeqGrabberView; 
+                mShelf = DMClipShelf; 
+                mShelfBox = NSBox; 
+                mSourceSwitchBox = NSBox; 
+                mTabControlView = TabviewControlView; 
+                mThemeController = IMThemeController; 
+                mTimelineBox = NSBox; 
+                mTimelineToggle = IMTimelineToggle; 
+                mTitleController = IMTitleController; 
+                mTransitionController = IMTransitionController; 
+                mTrashWellView = IMTrashWellView; 
+                mVolumeBox = NSBox; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {
+            ACTIONS = {applyEffect = id; applyTitle = id; applyTransition = id; }; 
+            CLASS = IMQCEffectController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindowController = IMProjectController; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = IMQuickDrawView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindowController = IMProjectController; }; 
+            SUPERCLASS = NSQuickDrawView; 
+        }, 
+        {
+            CLASS = IMSGCaptureView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindowController = id; }; 
+            SUPERCLASS = NSOpenGLView; 
+        }, 
+        {
+            CLASS = IMScrubberView2; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindowController = id; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            ACTIONS = {
+                fastForward = id; 
+                pause = id; 
+                play = id; 
+                rewind = id; 
+                showCameraConnectionHelp = id; 
+                showCameraMenu = id; 
+                stop = id; 
+                switchToEditMode = id; 
+                toggleCapture = id; 
+            }; 
+            CLASS = IMSeqGrabberView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mCameraConnHelpButton = NSButton; 
+                mCameraMenuButton = GraphicalButton; 
+                mHDVView = IMHDVCaptureView; 
+                mImportButton = HorzGraphicalPushButton; 
+                mSGView = IMSGCaptureView; 
+                mWindowController = IMProjectController; 
+            }; 
+            SUPERCLASS = NSQuickDrawView; 
+        }, 
+        {
+            CLASS = IMSmallBlackEffectsPreview; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = IMSmallBlackPreview; 
+        }, 
+        {
+            CLASS = IMSmallBlackPreview; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindowController = IMProjectController; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            CLASS = IMSmallBlackTitlesPreview; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = IMSmallBlackPreview; 
+        }, 
+        {
+            CLASS = IMSmallBlackTransitionsPreview; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = IMSmallBlackPreview; 
+        }, 
+        {
+            CLASS = IMSmallGraphicalTabButton; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = HorzGraphicalButton; 
+        }, 
+        {
+            CLASS = IMSmallPreview; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindowController = IMProjectController; }; 
+            SUPERCLASS = IMCocoaMovieView; 
+        }, 
+        {CLASS = IMSmallQDPreview; LANGUAGE = ObjC; SUPERCLASS = NSQuickDrawView; }, 
+        {
+            CLASS = IMSourceSwitchView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindowController = id; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            ACTIONS = {
+                applyPanAndZoom = id; 
+                previewPanAndZoom = id; 
+                reverse = id; 
+                setDuration = id; 
+                setWhich = id; 
+                toggleKenBurns = id; 
+                zoom = id; 
+            }; 
+            CLASS = IMStillPreview; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mApplyButton = id; 
+                mDurationSlider = id; 
+                mDurationText = id; 
+                mKenBurnsCheckBox = NSButton; 
+                mPhotoObject = id; 
+                mPreviewButton = id; 
+                mReverseButton = id; 
+                mStartFinishSwitch = IMKenBurnsStartEndSwitchView; 
+                mWindowController = IMProjectController; 
+                mZoomSlider = id; 
+                mZoomText = id; 
+            }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {CLASS = IMTabView; LANGUAGE = ObjC; SUPERCLASS = NSTabView; }, 
+        {
+            ACTIONS = {
+                applyButtonPressed = id; 
+                dropZoneButtonPressed = id; 
+                previewButtonPressed = id; 
+                themeElementPressed = id; 
+                themePopupChanged = id; 
+                titleChanged = id; 
+            }; 
+            CLASS = IMThemeController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mApplyButton = NSButton; 
+                mBoxBottom = id; 
+                mBoxTop = id; 
+                mCantUseThemesTextField = id; 
+                mDropZoneButton = NSButton; 
+                mPreviewButton = NSButton; 
+                mProjectController = IMProjectController; 
+                mThemeElementMatrix = IMThemeElementMatrix; 
+                mThemeElementScrollView = id; 
+                mThemeElementsText = id; 
+                mThemePopup = NSPopUpButton; 
+                mTitle1Label = NSTextField; 
+                mTitle1TextField = NSTextField; 
+                mTitle2Label = NSTextField; 
+                mTitle2TextField = NSTextField; 
+                mTitle3Label = NSTextField; 
+                mTitle3TextField = NSTextField; 
+                mTitle4Label = NSTextField; 
+                mTitle4TextField = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = IMThemeElementMatrix; LANGUAGE = ObjC; SUPERCLASS = NSMatrix; }, 
+        {
+            CLASS = IMThemeElementMatrixCell; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSButtonCell; 
+        }, 
+        {CLASS = IMThemeElementView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            CLASS = IMTimelineToggle; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mClipImageView = NSImageView; mTimelineImageView = NSImageView; }; 
+            SUPERCLASS = NSControl; 
+        }, 
+        {
+            ACTIONS = {
+                changeView = id; 
+                didShowHideAudioWaveforms = id; 
+                didShowHideVolumeLevels = id; 
+                markerOverlayDidChangeSelection = id; 
+                markerOverlayWantsDeselectAll = id; 
+                scrollToPlayhead = id; 
+                showEffectSettings = id; 
+                showPhotoSettings = id; 
+                showTitleSettings = id; 
+                showTransitionSettings = id; 
+                toggleTimelineMode = id; 
+                zoomTimeLine = id; 
+                zoomToSelection = id; 
+            }; 
+            CLASS = IMTimelineView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mTimelineToggle = IMTimelineToggle; 
+                mVolumeController = IMVolumeController; 
+                mZoomInImage = NSImageView; 
+                mZoomOutImage = NSImageView; 
+                mZoomSlider = NSSlider; 
+            }; 
+            SUPERCLASS = DynamicMatrix; 
+        }, 
+        {
+            ACTIONS = {
+                addTitlePair = id; 
+                applyTitle = id; 
+                fontChanged = id; 
+                fontPopupChanged = id; 
+                fontSizeChanged = id; 
+                removeTitlePair = id; 
+                showFontPanel = id; 
+                titlesOverBlackSelected = id; 
+                updateTitle = id; 
+                updateTitleBlock = id; 
+                updateTitleOther = id; 
+                updateTitlePause = id; 
+                updateTitleSpeed = id; 
+                updateTitleText = id; 
+            }; 
+            CLASS = IMTitleController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mAddTitlePairButton = GraphicalButton; 
+                mCocoaTextBlockScrollView = NSScrollView; 
+                mCocoaTitlesTextBlock = IMCocoaTitleInputView; 
+                mColorText = NSTextField; 
+                mDurationLabel = NSTextField; 
+                mFamilyLabel = id; 
+                mFontFamilies = NSPopUpButton; 
+                mFontLabel = NSTextField; 
+                mFontPopup = NSPopUpButton; 
+                mLargeFontText = NSTextField; 
+                mMultiPairTitleForm = IMTitlePairForm; 
+                mRemoveTitlePairButton = GraphicalButton; 
+                mSinglePairTitleForm = NSForm; 
+                mSizeLabel = NSTextField; 
+                mSmallFontText = NSTextField; 
+                mTextBlockScrollView = NSScrollView; 
+                mTitleApplyButton = NSButton; 
+                mTitleColorWell = NSColorWell; 
+                mTitleDirectionView = IMPluginDirectionView; 
+                mTitleOtherLabel = NSTextField; 
+                mTitleOtherMaxLabel = NSTextField; 
+                mTitleOtherMinLabel = NSTextField; 
+                mTitleOtherSlider = MouseEventSlider; 
+                mTitlePairView = IMTitlePairView; 
+                mTitlePauseLabel = NSTextField; 
+                mTitlePauseMaxImageView = NSImageView; 
+                mTitlePauseMaxLabel = NSTextField; 
+                mTitlePauseMinImageView = NSImageView; 
+                mTitlePauseMinLabel = NSTextField; 
+                mTitlePauseSlider = MouseEventSlider; 
+                mTitlePauseText = IMDurationTextField; 
+                mTitleSizeSlider = NSSlider; 
+                mTitleSpeedLabel = NSTextField; 
+                mTitleSpeedMaxImageView = NSImageView; 
+                mTitleSpeedMaxLabel = NSTextField; 
+                mTitleSpeedMinImageView = NSImageView; 
+                mTitleSpeedMinLabel = NSTextField; 
+                mTitleSpeedSlider = MouseEventSlider; 
+                mTitleSpeedText = IMDurationTextField; 
+                mTitleTextTabView = IMTabView; 
+                mTitleTotalFramesText = IMDurationTextField; 
+                mTitleUpdateButton = NSButton; 
+                mTitlesOutlineView = NSOutlineView; 
+                mTitlesOverBlack = NSButton; 
+                mTitlesTextBlock = NSTextView; 
+                mTypeFaces = NSPopUpButton; 
+                mTypefaceLabel = id; 
+            }; 
+            SUPERCLASS = IMPluginControllerCommon; 
+        }, 
+        {
+            CLASS = IMTitlePairForm; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindowController = IMProjectController; }; 
+            SUPERCLASS = NSForm; 
+        }, 
+        {
+            ACTIONS = {addTitlePair = id; removeTitlePair = id; }; 
+            CLASS = IMTitlePairView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindowController = id; }; 
+            SUPERCLASS = NSScrollView; 
+        }, 
+        {CLASS = IMTitleSmallPreview; LANGUAGE = ObjC; SUPERCLASS = IMSmallQDPreview; }, 
+        {
+            ACTIONS = {applyTransition = id; updateTransition = id; updateTransitionSpeed = id; }; 
+            CLASS = IMTransitionController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mTransitionApplyButton = NSButton; 
+                mTransitionDirectionView = IMPluginDirectionView; 
+                mTransitionSpeedSlider = MouseEventSlider; 
+                mTransitionSpeedText = IMDurationTextField; 
+                mTransitionUpdateButton = NSButton; 
+                mTransitionsOutlineView = NSOutlineView; 
+            }; 
+            SUPERCLASS = IMPluginControllerCommon; 
+        }, 
+        {
+            ACTIONS = {emptyTrash = id; showTrashWindow = id; }; 
+            CLASS = IMTrashWellView; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            ACTIONS = {
+                showVolumeWindow = id; 
+                volumeSliderChanged = id; 
+                volumeTextFieldChanged = id; 
+            }; 
+            CLASS = IMVolumeController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mVolumeBox = NSBox; 
+                mVolumeButton = GraphicalButton; 
+                mVolumeLabelField = NSTextField; 
+                mVolumeSlider = IMVolumeSlider; 
+                mVolumeTextBackgroundImage = NSImageView; 
+                mVolumeTextField = NSTextField; 
+                mVolumeWindow = NSPanel; 
+                mWindowController = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = IMVolumeSlider; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mDelegate = id; }; 
+            SUPERCLASS = NSSlider; 
+        }, 
+        {
+            CLASS = IMVolumeWindow; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mContentBox = NSBox; }; 
+            SUPERCLASS = NSPanel; 
+        }, 
+        {CLASS = IWFloatingView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = IWFloatingWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
+        {CLASS = IWWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
+        {CLASS = IWWindowBackgroundView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = IWWindowResizeControl; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            ACTIONS = {
+                displayMovies = id; 
+                displayPictures = id; 
+                displaySongs = id; 
+                playSelectedSongs = id; 
+                stopPreview = id; 
+            }; 
+            CLASS = MediaBrowserView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mDelegate = id; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            CLASS = MouseEventSlider; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mDelegate = id; }; 
+            SUPERCLASS = NSSlider; 
+        }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }, 
+        {
+            ACTIONS = {qtHome = id; qtPlay = id; qtPlayFullScreen = id; }; 
+            CLASS = PlayControlView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mHomeButton = GraphicalButton; 
+                mPlayButton = GraphicalButton; 
+                mPlayFullScreenButton = GraphicalButton; 
+                mWindowController = id; 
+            }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            CLASS = RecordButtonView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mWindowController = id; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {CLASS = RolloverButton; LANGUAGE = ObjC; SUPERCLASS = NSButton; }, 
+        {
+            ACTIONS = {
+                selectClipsTab = id; 
+                selectDVDTab = id; 
+                selectEditingTab = id; 
+                selectMediaTab = id; 
+                selectThemeTab = id; 
+            }; 
+            CLASS = TabviewControlView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mClipsButton = IMBigGraphicalTabButton; 
+                mDVDButton = IMBigGraphicalTabButton; 
+                mEditingButton = IMBigGraphicalTabButton; 
+                mMediaButton = IMBigGraphicalTabButton; 
+                mThemeButton = IMBigGraphicalTabButton; 
+                mWindowController = IMProjectController; 
+            }; 
+            SUPERCLASS = NSView; 
+        }
+    ); 
+    IBVersion = 1; 
+}

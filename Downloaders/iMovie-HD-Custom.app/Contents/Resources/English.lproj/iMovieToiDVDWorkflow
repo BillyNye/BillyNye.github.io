@@ -1,0 +1,167 @@
+
+-------------------------------------------------------------------------------------------------------------
+--gkm 31-jan-03
+--NOTE: to address 3142643,
+--lastOpenediDVDProject is no longer called when iDVDisRunning is true
+--this makes parse_XML and extract_tagvalue obsolete
+-------------------------------------------------------------------------------------------------------------
+--
+--
+-- send_idvd_imovieproject
+--
+-- main entry point for Kimono to iDVD workflow
+--
+on send_idvd_imovieproject(project_name, reference_movie_path, is_idvd_running, is_project_widescreen)
+--display dialog "in send_idvd_imovieproject NEW"
+
+-- Just some string resources we might want to localize
+set askToSaveMsg to "Save the current project before closing?"
+set iDVDIsBusyMessage to "iDVD is busy right now. Please try again later."
+set labelCancel to "Cancel"
+set labelYes to "Yes"
+set labelNo to "No"
+set labelOK to "OK"
+
+
+
+--please don't localize anything below here....
+
+
+
+
+set documentsFolder to "Documents"
+set userCanceledSaveReturnValue to "user canceled save"
+
+-- Set an appropriate name for the new iDVD project
+set projectName to project_name
+set moviePath to reference_movie_path
+set projectExtension to ".dvdproj"
+--display dialog "Project name: " & projectName
+--display dialog "Movie path: " & moviePath
+--display dialog "Movie path: " & projectExtension
+-- Default storing location for iDVD projects: user's home directory
+set userDocumentsFolder to ((do shell script "echo ~") as string) & "/" & documentsFolder
+
+-- We will ask the user later soon if he want to store 
+-- an already opened project in iDVD
+set saveProject to "no"
+
+set projectPathWithoutExtension to userDocumentsFolder & "/" & projectName
+set projectPathWithExtension to projectPathWithoutExtension & projectExtension
+set isIDVDRunning to is_idvd_running
+set iDVDIsBusy to false
+set	isCurrentProjectIsWideScreen to is_project_widescreen
+
+--NOTE: we now expect iDVD to be launched by the time we get here....
+
+try
+tell application "%@"
+	activate
+		--display dialog "running!!"
+		
+	if isIDVDRunning = true then
+		--display dialog "if isIDVDRunning is true: " & isIDVDRunning
+
+		-- We need this try block here because 'is burning' is a new iDVD AppleScript command
+		-- in iDVD 3.0.5 and is not supported by earlier versions of iDVD
+		try
+			set iDVDIsBusy to run script "is burning"
+			--display dialog "iDVD is burning: " & iDVDIsBusy
+		on error
+			set iDVDIsBusy to false
+			--display dialog "This version of iDVD is too old for this command"
+		end try
+		
+		if iDVDIsBusy is false then
+			-- Ask the user if he wants to save an already opened project
+			display dialog askToSaveMsg buttons {labelCancel, labelNo, labelYes} default button 3
+			if the button returned of the result is labelYes then
+				set saveProject to "yes"
+			else if the button returned of the result is labelNo then
+				set saveProject to "no"
+			else
+				return userCanceledSaveReturnValue
+			end if
+		end if
+	end if
+	
+	if isCurrentProjectIsWideScreen is true
+		--display dialog "widescreen is true"
+		set projectAspectRatio to widescreen
+	else
+		--display dialog "widescreen is false"
+		set projectAspectRatio to standard
+	end if
+
+	if iDVDIsBusy is true
+		display dialog iDVDIsBusyMessage buttons {labelOK} default button 1
+	else
+		-- create a valid name for the new project (we don't want to overwrite an already existing one)
+		--display dialog "Call validateProjectPath: " & projectName
+		--display dialog "project path without extension: " & projectPathWithoutExtension
+		set newProjectName to my validateProjectPath(projectPathWithoutExtension)
+		--display dialog "Project name after valdiation: " & newProjectName
+		-- create the new project
+		new project name projectName path newProjectName save current saveProject
+		
+		-- set theme here
+		
+		if (aspect ratio is not projectAspectRatio) then
+			set aspect ratio to projectAspectRatio
+		end if
+		
+		-- and add the movie
+		-- add command to send current iMovie project to iDVD
+		make new movie at end of movies of menu 0 with properties {name:projectName, path:moviePath}
+	end if
+	
+end tell
+
+on error
+	return userCanceledSaveReturnValue
+end try
+
+end send_idvd_imovieproject
+
+--
+-- validateProjectPath
+--
+-- This little function checks if the new project already exists
+-- and if this is the case it creates a new project by appending
+-- " 1", " 2" or whatever is appropriate to the name so that we
+-- don't overwrite existing projects
+-- 
+on validateProjectPath(pPath)
+	--display dialog "INSIDE validateProjectPath: " & pPath
+	set fileExists to "yes"
+	set currentPath to pPath
+	set postfix to 0
+	set projectExtension to ".dvdproj"
+	
+	try
+		
+		repeat while fileExists = "yes"
+			if postfix > 0 then
+				set currentPath to pPath & " " & (postfix as text)
+			end if
+			set currentPath to currentPath & projectExtension
+			--display dialog "currentPath: " & currentPath
+			set currentValidAppleScriptPath to POSIX file currentPath
+			--display dialog "currentValidAppleScriptPath: " & currentValidAppleScriptPath
+			tell application "Finder"
+				if (the file currentValidAppleScriptPath exists) then
+					--display dialog "file exists: " & currentValidAppleScriptPath
+					set postfix to postfix + 1
+				else
+					--display dialog "file does not exist: " & currentValidAppleScriptPath
+					set fileExists to "no"
+				end if -- files exist
+			end tell -- tell Finder 
+		end repeat
+		
+	on error
+		--display dialog "LEAVING validateProjectPath: " & currentPath
+		return currentPath
+	end try
+	
+end validateProjectPath
