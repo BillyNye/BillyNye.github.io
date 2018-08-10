@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+<key>_LOCALIZABLE_</key>
+<dict>
+	<key>groupName</key>
+	<array>
+		<string>Clip to Characters</string>
+		<string>Clip to Characters</string>
+		<string>Clip to Characters</string>
+		<string>Clip to Characters</string>
+		<string>Spinning</string>
+		<string></string>
+	</array>
+	<key>menuName</key>
+	<array>
+		<string>Starburst</string>
+		<string>Clip Image</string>
+		<string>Clip Video</string>
+		<string>Animated Gradient</string>
+		<string>Spinner</string>
+		<string>Wipe</string>
+	</array>
+	<key>minMaxLabel</key>
+	<array>
+		<string>One</string>
+		<string>Many</string>
+	</array>
+	<key>sliderLabel</key>
+	<array>
+		<string>Spins:</string>
+	</array>
+</dict>
+</dict>
+</plist>

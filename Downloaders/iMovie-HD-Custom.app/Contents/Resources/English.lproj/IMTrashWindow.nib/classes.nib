@@ -1,0 +1,31 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = GraphicalButton; LANGUAGE = ObjC; SUPERCLASS = NSButton; }, 
+        {CLASS = HorzGraphicalButton; LANGUAGE = ObjC; SUPERCLASS = GraphicalButton; }, 
+        {
+            CLASS = HorzGraphicalPushButton; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = HorzGraphicalButton; 
+        }, 
+        {CLASS = IMCocoaMovieView; LANGUAGE = ObjC; SUPERCLASS = QTMovieView; }, 
+        {CLASS = IMEnhancedTableView; LANGUAGE = ObjC; SUPERCLASS = NSTableView; }, 
+        {
+            ACTIONS = {deleteSelectedItems = id; emptyTrash = id; }; 
+            CLASS = IMNewTrashController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mCountTextField = NSTextField; 
+                mDeleteSelectedButton = NSButton; 
+                mEmptyTrashButton = NSButton; 
+                mMovieView = IMCocoaMovieView; 
+                mSizeTextField = NSTextField; 
+                mTableView = IMEnhancedTableView; 
+            }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = IMTrashTableView; LANGUAGE = ObjC; SUPERCLASS = IMEnhancedTableView; }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }
+    ); 
+    IBVersion = 1; 
+}

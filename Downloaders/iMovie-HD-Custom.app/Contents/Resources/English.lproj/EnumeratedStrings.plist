@@ -1,0 +1,97 @@
+/* many of the strings that need to be displayed in iMovie are the result of error or status codes that are handed to us from other places, so it's not practical to map from a string-key to a localized string. The following entries are ORDERED ARRAYS which must stay in sequence to match up to their intended values. Where possible, comments are provided below. This list is parsed by ObjCBridge.mm. 
+*/
+
+// STR_CAMERA_STATUS -- these states must stay in sync with HYDeckState enum
+kCameraStates = (
+	"Error Communicating With Camera",	// kUnknownState
+	"Camera Disconnected or Off",		// kDisconnectedState
+	"Camera Connected",					// kStopped
+	"Camera Playing",					// kPlaying
+	"Camera Stepping Forward",			// kStepFrameFwd
+	"Camera Stepping Backward",			// kStepFrameBack
+	"Camera Rewinding…",				// kRewinding
+	"Camera Fast Forward…",			// kFastForwarding
+	"Camera Paused",					// kPlayPaused
+	"Camera Seeking Forward",			// kSeekFwd
+	"Camera Seeking Backward",			// kSeekBack
+	"Camera Recording",					// kRecording
+	"Camera Ready to Record",			// kRecordPaused
+	"Camera No Tape",					// kNoTape
+	"Camera Tape Tray Open",			// kTapeTrayOpen
+	"Camera Tape Tray Closing",			// kTapeTrayClosed
+	"No Device Control",				// kNoDeviceControl
+	"Error Communicating With Camera"   // kDeckInErrorState
+);
+
+// undo/redo menu item text
+// These strings must line up with the HYAction enum in HYUndo.h
+kUndoMenuStrings = (
+	"NOT USED", 
+	"Undo %@", 				// kUndoBase = 1,
+	"Redo %@", 				// kRedoBase,
+	"Can't Undo", 			// kCantUndo,
+	"Can't Redo", 			// kCantRedo,
+	
+	"No Action",  			// kActionNone	// 5
+	
+	"Move", 				// kActionMove
+	"Cut",  				// kActionCut
+	"Clear",  			    // kActionClear
+	"Paste",  				// kActionPaste
+	"Split",  				// kActionSplit	// 10
+	"Crop",  			 	// kActionTrim
+	"Volume Adjustment", 	// kActionVolumeAdjust
+	"Import",  				// kActionImport
+	"Capture Video",  		// kActionCapture
+	"Record from Microphone", // kActionRecordFromMicrophone // 15
+	"Add Transition", 		// kActionAddTransition
+	"Update Transition", 	// kActionUpdateTransition
+	"Add Title", 			// kActionAddTitle
+	"Update Title", 		// kActionUpdateTitle
+	"Drag to Trash",  		// kActionDragToTrash // 20
+	"Add Stray File to Project", // kActionAddStrayFile
+	"Add Sound",  			// kActionAddSound
+	"Add Music",  			// kActionAddMusic
+	"Duration Change",  	// kActionChangeDuration
+	"Adjust Audio Clip Start", // kActionAdjustAudioStart  // 25
+	"Adjust Audio Clip Stop", // kActionAdjustAudioEnd
+	"Audio Fade",  			// kActionAdjustAudioFade
+	"Name Change",  		// kActionChangeName
+	"Clip Direction Change",// kActionClipDirectionChange	
+	"Clip Speed Change", 	// kActionClipSpeedChange // 30
+	"Restore Clip",  	 	// kActionRemoveFilter
+	"Apply Effect", 	 	// kActionApplyFilter
+	"Extract Audio", 		// kActionExtractAudio
+	"Create Still Clip", 	// kActionAddProjectFrameStillClip	
+	"Paste Over", 			// kActionPasteOver // 35
+	"Update Effect", 		// kActionUpdateFilter
+	"Commit Effect", 		// kActionCommitFilter
+	"Lock Audio Clip", 		// kActionAddAudioPushPin
+	"Remove Audio Lock", 	// kActionRemoveAudioPushPin
+	"Change Clip Info", 	// kActionChangeClipInfo // 40
+	"Slow Motion Render", 	// kActionRenderSlowMotion
+	"Convert Still Clip", 	// kActionExplodeClip
+	"Track Muting Change", 	// kActionChangeMuteState
+	"Pillarboxing",			// kActionPillarbox,
+	"Letterboxing",			// kActionLetterbox
+	"Add Theme"				// KActionAddTheme
+);
+
+// This array controls which devices we see as media
+// converter boxes. If it's not in the list, we treat it as a camera.
+
+// In general, this array should not be localized.
+// However, if Apple GEO's decide to drop or add devices,
+// they could add or remove product names here.
+// To get the name of a particular device, use the
+// IORegistryExplorer (/Developer/Applications) and look at
+// the IOFireWire tree's "FireWire Product Name" key.
+// This is the name embedded in the device's ROMs.
+
+kDVConverterBoxProductNames = (
+	"2", 				// number of products in this array.
+	"DVMC-DA2", 		// The original Sony box!
+	"HollywoodX" 		// Dazzle Hollywood DVBridge
+	//"DV converter"		// Miglia Director's Cut
+);
+	

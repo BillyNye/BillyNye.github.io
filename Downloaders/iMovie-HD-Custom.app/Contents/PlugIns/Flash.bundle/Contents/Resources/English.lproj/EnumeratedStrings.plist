@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+<key>_LOCALIZABLE_</key>
+<dict>
+	<key>menuName</key>
+	<array>
+		<string>Flash</string>
+	</array>
+	<key>minMaxLabel</key>
+	<array>
+		<string>One</string>
+		<string>Max</string>
+		<string>Min</string>
+		<string>Max</string>
+		<string>Fast</string>
+		<string>Slow</string>
+	</array>
+	<key>sliderLabel</key>
+	<array>
+		<string>Count:</string>
+		<string>Brightness:</string>
+		<string>Speed:</string>
+	</array>
+</dict>
+</dict>
+</plist>

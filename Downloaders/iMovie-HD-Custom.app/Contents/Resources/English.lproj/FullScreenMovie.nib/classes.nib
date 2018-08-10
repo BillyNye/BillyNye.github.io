@@ -1,0 +1,15 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = FullScreenMovieController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mCompletionObject = id; mMovieView = FullScreenMovieView; }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {CLASS = FullScreenMovieView; LANGUAGE = ObjC; SUPERCLASS = IMCocoaMovieView; }, 
+        {CLASS = FullScreenMovieWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
+        {CLASS = IMCocoaMovieView; LANGUAGE = ObjC; SUPERCLASS = QTMovieView; }
+    ); 
+    IBVersion = 1; 
+}
