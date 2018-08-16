@@ -5,4 +5,4 @@
   You can contact me at Nyes.mega@gmail.com for questions. 
   
   
-  If you have an issue with the presence of the fws/sws hosted here *please* contact me before reporting/striking my GH account, I will not hesitate to take down a file if there is a legitimate reason to do so. Thanks in advance!
+  If you have an issue with the presence of any of the fws/sws hosted here *please* contact me before reporting/striking my GH account, I will not hesitate to take down a file if there is a legitimate reason to do so. Thanks in advance!
